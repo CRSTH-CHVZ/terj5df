@@ -77,17 +77,18 @@ class App extends Component {
                 </tr>
               </thead>
               <tbody>
+
                 {
                   this.state.guests.length >= 1 ?
                       this.state.guests.map( ( el, i ) => {
                         return(
-                            <tr key={i}>
-                              <th>{el.name}</th>
-                              <th>{el.surename}</th>
-                            </tr>
+                                <tr key={ i }>
+                                <td>{el.name}</td>
+                                <td>{el.surename}</td>
+                                </tr>
                         )
                       })
-                      : 'No hay invitados registrados'
+                      : null
                 }
               </tbody>
             </table>
